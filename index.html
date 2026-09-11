@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Raj | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raj | AI & Web Development</title>
+    <meta name="description" content="Raj's personal portfolio — AI learner, prompt engineering enthusiast and web development learner.">
 
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -12,100 +21,236 @@
             text-align: center;
         }
 
-        .hero {
-            padding: 100px 20px;
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 15px;
+            background: rgba(11, 11, 11, 0.95);
+            border-bottom: 1px solid #222;
         }
 
-        h1 {
-            font-size: 50px;
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00ff99;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 10vw, 70px);
+            margin: 10px 0;
         }
 
         span {
             color: #00ff99;
         }
 
-        p {
+        .hero p {
             color: #aaa;
             font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 25px;
+            padding: 13px 27px;
             background: #00ff99;
-            color: black;
+            color: #000;
             text-decoration: none;
             border-radius: 25px;
             margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: scale(1.04);
         }
 
         section {
-            padding: 60px 20px;
+            padding: 75px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
         }
 
         .card {
             background: #171717;
+            border: 1px solid #252525;
             padding: 25px;
             margin: 15px auto;
-            max-width: 450px;
+            max-width: 600px;
             border-radius: 15px;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            background: #171717;
+            border: 1px solid #252525;
+            padding: 25px 15px;
+            border-radius: 15px;
+        }
+
+        .project-title {
+            color: #00ff99;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .contact a {
+            color: #00ff99;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 30px 20px;
+            border-top: 1px solid #222;
+            color: #777;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
 
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="hero">
+        <p>WELCOME TO MY PORTFOLIO</p>
+
         <h1>Hi, I'm <span>Raj</span></h1>
 
-        <p>AI Learner • Web Developer • Future Creator</p>
+        <p>
+            AI Learner • Prompt Engineering • Web Development
+        </p>
 
-        <a href="#projects" class="btn">
-            View My Work
-        </a>
+        <p>
+            I'm learning modern technology by building practical projects
+            and improving my skills step by step.
+        </p>
+
+        <a href="#projects" class="btn">View My Work</a>
     </div>
 
-    <section>
+
+    <section id="about">
         <h2>About Me</h2>
 
         <div class="card">
-            <p>
-                I'm learning Artificial Intelligence
-                and Web Development and building
-                my skills through real projects.
-            </p>
+            I'm currently learning Artificial Intelligence and Web Development.
+            My goal is to turn what I learn into real projects and build
+            useful digital products.
         </div>
     </section>
 
-    <section>
-        <h2>My Skills</h2>
 
-        <div class="card">
-            🤖 Artificial Intelligence
-        </div>
+    <section id="skills">
+        <h2>Skills I'm Learning</h2>
 
-        <div class="card">
-            🌐 Web Development
-        </div>
+        <div class="skills">
 
-        <div class="card">
-            🧠 Prompt Engineering
+            <div class="skill">
+                🤖<br>
+                <strong>Artificial Intelligence</strong>
+            </div>
+
+            <div class="skill">
+                🧠<br>
+                <strong>Prompt Engineering</strong>
+            </div>
+
+            <div class="skill">
+                🌐<br>
+                <strong>Web Development</strong>
+            </div>
+
+            <div class="skill">
+                💻<br>
+                <strong>HTML</strong>
+            </div>
+
         </div>
     </section>
+
 
     <section id="projects">
         <h2>My Projects</h2>
 
         <div class="card">
-            🚀 My First Portfolio Website
+            <div class="project-title">
+                🚀 Personal Portfolio Website
+            </div>
+
+            <p>
+                My first live portfolio website, built with HTML and CSS
+                and deployed using GitHub Pages.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+
+        <div class="card">
+            📜 Certificates will be added here as I complete
+            recognized courses and certifications.
         </div>
     </section>
 
-    <section>
+
+    <section id="contact">
         <h2>Contact</h2>
 
-        <p>More coming soon...</p>
+        <div class="card contact">
+            <p>
+                Want to connect or see what I'm building?
+            </p>
+
+            <p>
+                <a href="mailto:your-email@example.com">
+                    Email Me
+                </a>
+            </p>
+        </div>
     </section>
+
+
+    <footer>
+        © 2026 Raj. Built while learning AI & Web Development.
+    </footer>
 
 </body>
 </html>
