@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #00ff99;
+            font-size: 38px;
+        }
+
+        p {
+            color: #aaa;
+        }
+
+        input {
+            width: 90%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #00ff99;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            background: #171717;
+            border-radius: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 AI Study Assistant</h1>
+
+        <p>Enter any topic and get a simple study explanation.</p>
+
+        <input 
+            type="text" 
+            id="topic" 
+            placeholder="Example: Artificial Intelligence"
+        >
+
+        <br>
+
+        <button onclick="studyTopic()">
+            Study This Topic 🚀
+        </button>
+
+        <div class="result" id="result">
+            Your explanation will appear here...
+        </div>
+
+    </div>
+
+    <script>
+
+        function studyTopic() {
+
+            let topic = document.getElementById("topic").value;
+
+            if (topic === "") {
+                document.getElementById("result").innerHTML =
+                    "⚠️ Please enter a topic first.";
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                "<h2>📚 " + topic + "</h2>" +
+                "<p>This is your AI Study Assistant project.</p>" +
+                "<p>In the next version, we will connect real AI to generate explanations, notes and quiz questions.</p>";
+        }
+
+    </script>
+
+</body>
+</html>
